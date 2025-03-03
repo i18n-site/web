@@ -1,15 +1,13 @@
 use axum::{Router, body::Body, response::IntoResponse, routing::get};
 use bytes::Bytes;
-use futures::stream::{self, Stream};
-use std::pin::Pin;
 use tokio::sync::mpsc;
 
 #[tokio::main]
 async fn main() {
     let app = Router::new().route("/stream", get(stream_handler));
 
-    println!("Server running on http://localhost:3000");
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
+    println!("Server running on http://{:?}", listener);
 
     axum::serve(listener, app.into_make_service())
         .await

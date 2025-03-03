@@ -6,8 +6,9 @@ use tokio::sync::mpsc;
 async fn main() {
     let app = Router::new().route("/stream", get(stream_handler));
 
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
-    println!("Server running on http://{:?}", listener);
+    let host_ip = "0.0.0.0:3000";
+    let listener = tokio::net::TcpListener::bind(host_ip).await.unwrap();
+    println!("running on http://{host_ip}");
 
     axum::serve(listener, app.into_make_service())
         .await

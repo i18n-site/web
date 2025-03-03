@@ -1,6 +1,7 @@
 use axum::{Router, body::Body, response::IntoResponse, routing::get};
 use bytes::Bytes;
 use tokio::sync::mpsc;
+use tokio::time::sleep;
 
 #[tokio::main]
 async fn main() {
@@ -29,7 +30,6 @@ async fn stream_handler() -> impl IntoResponse {
             )))
             .await
             .unwrap();
-            use tokio::time::sleep;
             sleep(tokio::time::Duration::from_secs(1)).await;
         }
     });

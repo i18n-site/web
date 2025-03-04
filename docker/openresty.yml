@@ -1,9 +1,9 @@
 services:
-  nginx:
+  openresty:
     env_file:
       - path: ./.env
         required: true
-    image: nginx
+    image: openresty
     restart: always
     volumes:
       - $ROOT:/mnt

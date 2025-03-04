@@ -1,6 +1,6 @@
 services:
-  nginx:
-    container_name: nginx
+  openresty:
+    container_name: openresty
     extends:
-      file: nginx.yml
-      service: nginx
+      file: openresty.yml
+      service: openresty

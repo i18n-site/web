@@ -16,7 +16,7 @@ const _cookieSet = (kv, t) => {
 		k = "_" + s,
 		v = k + "=" + s
 
-	while (i < p.length - 1 && DOC.cookie.indexOf(v) === -1) {
+	while (i < p.length - 1 && !DOC.cookie.includes(v)) {
 		_TLD = p.slice(-1 - ++i).join(".")
 		_cookieSet(v, 1e3)
 	}

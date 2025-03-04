@@ -3,7 +3,7 @@ services:
     env_file:
       - path: ./.env
         required: true
-    image: openresty
+    image: openresty/openresty
     restart: always
     volumes:
       - $ROOT:/mnt

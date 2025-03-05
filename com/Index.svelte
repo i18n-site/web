@@ -26,7 +26,12 @@ i-auth
 <script lang="coffee">
 > -/dom/Toast.js > Warn
   -/dom/Auth.js > signin
-  -/srv.js > demoCaptcha
+  -/srv.js > demoCaptcha userName
+  svelte > onMount
+
+onMount =>
+  console.log await userName()
+  return
 
 auth = =>
   signin()

@@ -25,6 +25,7 @@ export const setUser = (u) => {
 			(U_VAL =
 				DOC.cookie
 					.split(";")
+					.map((i) => i.trimStart())
 					.filter((i) => i.startsWith("u="))[0]
 					?.slice(2) || "#"),
 		)

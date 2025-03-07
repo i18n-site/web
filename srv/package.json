@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "srv": "file:../../srv/gen/js"
+  }
+}

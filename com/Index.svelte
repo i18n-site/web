@@ -6,7 +6,7 @@ p
 
 i-auth
 //-
-i-state(_="//api.u-01.eu.org")
+  i-state(_="//api.u-01.eu.org")
 </template>
 
 <style lang="stylus">

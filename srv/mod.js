@@ -1,8 +1,8 @@
-export * from "srv/api.js"
-import { T1Decode as CaptchaD, T2Decode as CodeLiD } from "srv/_.pb.js"
+export * from "mod"
+import { set } from "mod"
+import { T1Decode as CaptchaD, T2Decode as CodeLiD } from "mod/_.pb.js"
 import utf8d from "-/lib/utf8d.js"
 import { Tag, body, HtmE, DOC } from "-/dom/_.js"
-import { set } from "srv/api.js"
 import { Warn } from "-/dom/Toast.js"
 import Captcha from "-/dom/Captcha.js"
 
